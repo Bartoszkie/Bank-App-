@@ -4,9 +4,10 @@ import { Routes, RouterModule } from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
 import { BannerComponent } from './banner/banner.component';
 import { FooterComponent } from './footer/footer.component';
+import { LoginPageComponent } from './login-page/login-page.component';
 
 const routes: Routes = [
-  // { path: '', component: NavbarComponent },
+  { path: 'login', component: LoginPageComponent },
   // { path: '', component: BannerComponent },
 ];
 
@@ -19,4 +20,5 @@ export const appRoutingComponents = [
   NavbarComponent,
   BannerComponent,
   FooterComponent,
+  LoginPageComponent
 ];

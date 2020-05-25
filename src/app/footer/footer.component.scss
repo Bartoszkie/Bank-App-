@@ -10,7 +10,8 @@
 
     padding: 1.5rem 2rem;
 
-    border-top: .1rem solid rgba(0, 0, 0, .1);
+    box-shadow: 0 -5px 5px -5px #ff6200;
+    border-top: .1rem solid #ff6200;
 
     &__content {
         width: 100%;

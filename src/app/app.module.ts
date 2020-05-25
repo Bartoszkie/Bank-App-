@@ -6,9 +6,10 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { BannerComponent } from './banner/banner.component';
 import { FooterComponent } from './footer/footer.component';
+import { LoginPageComponent } from './login-page/login-page.component';
 
 @NgModule({
-  declarations: [AppComponent, appRoutingComponents],
+  declarations: [AppComponent, appRoutingComponents, LoginPageComponent],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
