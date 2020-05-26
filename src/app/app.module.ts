@@ -7,9 +7,10 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { BannerComponent } from './banner/banner.component';
 import { FooterComponent } from './footer/footer.component';
 import { LoginPageComponent } from './login-page/login-page.component';
+import { UserPanelComponent } from './user-panel/user-panel.component';
 
 @NgModule({
-  declarations: [AppComponent, appRoutingComponents, LoginPageComponent],
+  declarations: [AppComponent, appRoutingComponents, LoginPageComponent, UserPanelComponent],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],

@@ -5,10 +5,11 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { BannerComponent } from './banner/banner.component';
 import { FooterComponent } from './footer/footer.component';
 import { LoginPageComponent } from './login-page/login-page.component';
+import { UserPanelComponent } from './user-panel/user-panel.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginPageComponent },
-  // { path: '', component: BannerComponent },
+  { path: 'login/userpanel', component: UserPanelComponent },
 ];
 
 @NgModule({
@@ -20,5 +21,5 @@ export const appRoutingComponents = [
   NavbarComponent,
   BannerComponent,
   FooterComponent,
-  LoginPageComponent
+  LoginPageComponent,
 ];
