@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ModalService } from '../modal';
+import {UserModalComponent} from "./user-modal.component";
+import {ModalService} from "../modal/modal.service";
 
 @Component({
   selector: 'app-user-panel',
@@ -14,11 +15,11 @@ export class UserPanelComponent implements OnInit {
     this.bodyText = 'This text can be updated in modal 1';
   }
 
-  openModal(id: string) {
-    this.modalService.open(id);
+  openModal() {
+    this.modalService.open(UserModalComponent);
   }
 
-  closeModal(id: string) {
-    this.modalService.close(id);
+  closeModal() {
+    this.modalService.close();
   }
 }

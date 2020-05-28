@@ -1,28 +1,50 @@
-import { Injectable } from '@angular/core';
+import {ComponentFactoryResolver, ElementRef, Injectable, Injector, NgZone, Type} from '@angular/core';
+import {ModalComponent} from "./modal.component";
 
 @Injectable({ providedIn: 'root' })
 export class ModalService {
-    private modals: any[] = [];
+    private _modalRef: ElementRef;
+    private _instance;
+    private _escapeListener: boolean;
 
-    add(modal: any) {
-        // add modal to array of active modals
-        this.modals.push(modal);
+    constructor(private resolver : ComponentFactoryResolver,
+                private injector: Injector, private zone: NgZone) {
     }
 
-    remove(id: string) {
-        // remove modal from array of active modals
-        this.modals = this.modals.filter(x => x.id !== id);
+    set modal(modal: ElementRef) {
+      this._modalRef = modal;
     }
 
-    open(id: string) {
-        // open modal specified by id
-        const modal = this.modals.find(x => x.id === id);
-        modal.open();
+    open(type: Type<any>, escapeListener?: boolean) {
+      const component = this.createComponent(type);
+      this._instance = this.createComponent(ModalComponent);
+      document.body.appendChild(this._instance);
+      document.querySelector('.jw-modal-body').prepend(component)
+      escapeListener && this.escapeListener();
+      return component;
     }
 
-    close(id: string) {
-        // close modal specified by id
-        const modal = this.modals.find(x => x.id === id);
-        modal.close();
+    close() {
+      document.querySelector('app-modal').remove();
+      this._escapeListener && document.removeEventListener('keyup', this.escapeDetect)
+    }
+
+    private escapeListener() {
+      document.addEventListener('keyup', this.escapeDetect);
+      this._escapeListener = true;
+    }
+
+    private escapeDetect($event) {
+      if ($event.key === "Escape") {
+        this.close();
+      }
+    }
+
+    private createComponent(type: Type<any>) {
+      const factory = this.resolver.resolveComponentFactory(type);
+      const componentRef = factory.create(this.injector);
+      componentRef.hostView.detectChanges();
+      const { nativeElement } = componentRef.location;
+      return nativeElement;
     }
 }
