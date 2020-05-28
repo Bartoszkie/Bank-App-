@@ -17,9 +17,9 @@
         <span class="userpanel__resources__maketransaction__payin__add">
           +
         </span>
-        <a routerLink="" class="userpanel__resources__maketransaction__payin__txt">
+        <button (click)="openModal('custom-modal-1')" class="userpanel__resources__maketransaction__payin__txt">
           wpłać środki
-        </a>
+        </button>
       </div>
       <div class="userpanel__resources__maketransaction__payin">
         <span class="userpanel__resources__maketransaction__payin__add">
@@ -39,5 +39,11 @@
       </div>
     </div>
   </div>
+
+  <app-modal id="custom-modal-1">
+    <h1>A Custom Modal Window!</h1>
+    <p>Home page text: <input type="text" [(ngModel)]="bodyText" /></p>
+    <button (click)="closeModal('custom-modal-1');">Close</button>
+  </app-modal>
 
 </section>
