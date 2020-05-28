@@ -6,10 +6,12 @@ import { BannerComponent } from './banner/banner.component';
 import { FooterComponent } from './footer/footer.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { UserPanelComponent } from './user-panel/user-panel.component';
+import { UsersComponent } from './users/users.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginPageComponent },
-  { path: 'login/userpanel', component: UserPanelComponent },
+  { path: 'login/users/userpanel', component: UserPanelComponent },
+  { path: 'login/users', component: UsersComponent },
 ];
 
 @NgModule({

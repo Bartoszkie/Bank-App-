@@ -36,6 +36,14 @@
     background-color: #fff;
     box-shadow: 0 0 5px #ff6200;
 
+    @media screen and (max-width: 600px) {
+      padding: 2.8rem 2rem;
+    }
+
+    @media screen and (max-width: 456px) {
+      border-radius: 0px;
+    }
+
     &__info {
       text-align: center;
       margin-bottom: 2rem;
@@ -44,12 +52,20 @@
         font-size: 3rem;
         font-weight: 400;
         letter-spacing: .1rem;
+
+        @media screen and (max-width: 456px) {
+          font-size: 2.5rem;
+        }
       }
 
       &__paragraph {
         margin-top: 1rem;
         font-size: 1.2rem;
         font-weight: 100;
+
+        @media screen and (max-width: 456px) {
+          font-size: .9rem;
+        }
       }
     }
 
@@ -66,11 +82,19 @@
           font-size: 1.2rem;
           font-weight: 100;
           margin: .5rem 0;
+
+          @media screen and (max-width: 456px) {
+            font-size: 1rem;
+          }
         }
 
         &>input {
           font-size: 1rem;
           padding: 1rem .9rem;
+
+          @media screen and (max-width: 456px) {
+            padding: .8rem .9rem;
+          }
 
           &:focus {
             border-color: 1px solid #ff6200;
@@ -94,6 +118,10 @@
         border-radius: 2px;
         padding: .7rem 3rem;
         margin-top: 1rem;
+
+        @media screen and (max-width: 456px) {
+          padding: .6rem 2.4rem;
+        }
       }
     }
   }
