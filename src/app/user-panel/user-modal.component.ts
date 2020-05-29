@@ -2,7 +2,7 @@ import {Component, OnInit} from "@angular/core";
 
 @Component({
   selector: 'app-user-panel',
-  template: `<div>Jest modal</div>`,
-  styles: [``],
+  templateUrl: `./user-modal.component.html`,
+  styleUrls: [`./user-modal.styles.scss`],
 })
 export class UserModalComponent {}

@@ -17,12 +17,31 @@ app-modal {
     /* enables scrolling for tall modals */
     overflow: auto;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     .jw-modal-body {
+      width: 100%;
+      max-width: 600px;
       padding: 20px;
       background: #fff;
 
       /* margin exposes part of the modal background */
       margin: 40px;
+
+      & > button {
+        background-color: #ff6200;
+        color: #fff;
+
+        border: 1px solid #ff6200;
+        outline: none;
+
+        width: 35px;
+        height: 35px;
+
+        border-radius: 50%;
+      }
     }
   }
 

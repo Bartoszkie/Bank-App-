@@ -14,7 +14,7 @@ export class ModalService {
     set modal(modal: ElementRef) {
       this._modalRef = modal;
     }
-
+ 
     open(type: Type<any>, escapeListener?: boolean) {
       const component = this.createComponent(type);
       this._instance = this.createComponent(ModalComponent);
@@ -22,6 +22,10 @@ export class ModalService {
       document.querySelector('.jw-modal-body').prepend(component)
       escapeListener && this.escapeListener();
       return component;
+    }
+
+    remove() {
+      
     }
 
     close() {

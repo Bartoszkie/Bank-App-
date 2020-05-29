@@ -13,30 +13,36 @@
     <span class="divider">
     </span>
     <div class="userpanel__resources__maketransaction">
-      <div class="userpanel__resources__maketransaction__payin">
-        <span class="userpanel__resources__maketransaction__payin__add">
-          +
-        </span>
-        <button (click)="openModal()" class="userpanel__resources__maketransaction__payin__txt">
-          wpłać środki
-        </button>
-      </div>
-      <div class="userpanel__resources__maketransaction__payin">
-        <span class="userpanel__resources__maketransaction__payin__add">
-          +
-        </span>
-        <a routerLink="" class="userpanel__resources__maketransaction__payin__txt">
-          wypłać środki
-        </a>
-      </div>
-      <div class="userpanel__resources__maketransaction__payin">
-        <span class="userpanel__resources__maketransaction__payin__add">
-          +
-        </span>
-        <a routerLink="" class="userpanel__resources__maketransaction__payin__txt">
-          wykonaj przelew
-        </a>
-      </div>
+      <button (click)="openModal()" class="userpanel__resources__maketransaction__modal">
+        <div class="userpanel__resources__maketransaction__payin">
+          <span class="userpanel__resources__maketransaction__payin__add">
+            +
+          </span>
+          <span class="userpanel__resources__maketransaction__payin__txt">
+            wpłać środki
+          </span>
+        </div>
+      </button>
+      <button class="userpanel__resources__maketransaction__modal">
+        <div class="userpanel__resources__maketransaction__payin">
+          <span class="userpanel__resources__maketransaction__payin__add">
+            +
+          </span>
+          <span class="userpanel__resources__maketransaction__payin__txt">
+            wypłać środki
+          </span>
+        </div>
+      </button>
+      <button class="userpanel__resources__maketransaction__modal">
+        <div class="userpanel__resources__maketransaction__payin">
+          <span class="userpanel__resources__maketransaction__payin__add">
+            +
+          </span>
+          <span class="userpanel__resources__maketransaction__payin__txt">
+            wykonaj przelew
+          </span>
+        </div>
+      </button>
     </div>
   </div>
 

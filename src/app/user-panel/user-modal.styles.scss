@@ -1,0 +1,36 @@
+.user__modal {
+    width: 100%;
+    max-width: 600px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__content {
+        width: 100%;
+
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__span {
+
+    }
+
+    &__inputnumber {
+
+    }
+
+    &__submit {
+        align-self: flex-end;
+        background-color: #ff6200;
+        border: 1px solid #fff;
+        padding: 5px 10px;
+        color: #fff;
+        font-weight: 400;
+        font-size: 15px;
+
+        margin-top: 10px;
+    }
+}
