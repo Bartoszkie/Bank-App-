@@ -10,6 +10,8 @@ import {FormsModule} from "@angular/forms";
 import {CommonModule} from "@angular/common";
 import {UserModalComponent} from "./user-panel/user-modal.component";
 import {ModalModule} from "./modal/modal.module";
+import { WelcomePageComponent } from './welcome-page/welcome-page.component';
+import { DetailsComponent } from './details/details.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import {ModalModule} from "./modal/modal.module";
     LoginPageComponent,
     UserPanelComponent,
     UsersComponent,
-    UserModalComponent
+    UserModalComponent,
+    WelcomePageComponent,
+    DetailsComponent
   ],
   imports: [BrowserModule, AppRoutingModule, ModalModule, FormsModule, CommonModule],
   providers: [],
