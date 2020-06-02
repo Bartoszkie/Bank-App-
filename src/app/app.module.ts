@@ -12,6 +12,7 @@ import {UserModalComponent} from "./user-panel/user-modal.component";
 import {ModalModule} from "./modal/modal.module";
 import { WelcomePageComponent } from './welcome-page/welcome-page.component';
 import { DetailsComponent } from './details/details.component';
+import { AddPracownikaComponent } from './add-pracownika/add-pracownika.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { DetailsComponent } from './details/details.component';
     UsersComponent,
     UserModalComponent,
     WelcomePageComponent,
-    DetailsComponent
+    DetailsComponent,
+    AddPracownikaComponent
   ],
   imports: [BrowserModule, AppRoutingModule, ModalModule, FormsModule, CommonModule],
   providers: [],

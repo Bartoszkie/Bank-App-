@@ -1,4 +1,4 @@
-export class Pracownicy {
+export class Użytkownicy {
   constructor(
     public id: string,
     public name: string,
