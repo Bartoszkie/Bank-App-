@@ -16,7 +16,7 @@ export class DodajuzytkownikaComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  addUżytkownika() {
+  addUzytkownika() {
     this.uzytkownikService.addUżytkownika(this.uzytkownikModel).subscribe();
   }
 }

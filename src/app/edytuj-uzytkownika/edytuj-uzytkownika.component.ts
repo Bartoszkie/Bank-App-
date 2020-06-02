@@ -23,7 +23,7 @@ export class EdytujUzytkownikaComponent implements OnInit {
       .subscribe((data) => (this.allUżytkownicy = data));
   }
 
-  editUżyutkownika() {
+  editUzyutkownika() {
     this.uzytkownikService.editUżytkownika(this.uzytkownikModel).subscribe();
   }
 }
