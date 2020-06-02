@@ -13,6 +13,8 @@ import {ModalModule} from "./modal/modal.module";
 import { WelcomePageComponent } from './welcome-page/welcome-page.component';
 import { DetailsComponent } from './details/details.component';
 import { AddPracownikaComponent } from './add-pracownika/add-pracownika.component';
+import { DodajuzytkownikaComponent } from './dodajuzytkownika/dodajuzytkownika.component';
+import { EdytujUzytkownikaComponent } from './edytuj-uzytkownika/edytuj-uzytkownika.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { AddPracownikaComponent } from './add-pracownika/add-pracownika.componen
     UserModalComponent,
     WelcomePageComponent,
     DetailsComponent,
-    AddPracownikaComponent
+    AddPracownikaComponent,
+    DodajuzytkownikaComponent,
+    EdytujUzytkownikaComponent
   ],
   imports: [BrowserModule, AppRoutingModule, ModalModule, FormsModule, CommonModule],
   providers: [],
